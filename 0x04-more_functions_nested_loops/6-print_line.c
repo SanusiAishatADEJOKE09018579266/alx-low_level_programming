@@ -2,8 +2,9 @@
 #include "main.h"
 
 /**
- * print_line - Draws a straight line using the character _.
- * @n: The number of _ characters to be printed.
+ * print_line - prints a straight line.
+ * @n: parameter
+ * Return: returns nothing
  */
 void print_line(int n)
 {
