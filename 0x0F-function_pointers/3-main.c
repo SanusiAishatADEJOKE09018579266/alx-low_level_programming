@@ -1,4 +1,4 @@
-#include "3-calc.h"
+include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -40,4 +40,3 @@ int main(int _attribute((unused_)) argc, char *argv[])
 	printf("%d\n", get_op_func(op)(num1, num2));
 
 	return (0);
-}
