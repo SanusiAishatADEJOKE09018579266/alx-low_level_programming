@@ -1,19 +1,19 @@
-#include "lists.h"
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * free_list - Frees a list_t list.
- * @head: A pointer to the list_t list.
+ * clear_bit - Sets the value of a bit at a given index to 0.
+ * @n: A pointer to the bit.
+ * @index: The index to set the value at - indices start at 0.
+ *
+ * Return: If an error occurs - -1.
+ *         Otherwise - 1.
  */
-void free_list(list_t *head)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-	list_t *tmp;
+	if (index >= (sizeof(unsigned long int) * 8))
+		return (-1);
 
-	while (head)
-	{
-		tmp = head->next;
-		free(head->str);
-		free(head);
-		head = tmp;
-	}
+	*n &= ~(1 << index);
+
+	return (1);
 }
